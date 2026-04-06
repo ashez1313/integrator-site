@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "cases": "Cases",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "badge": "Bitrix24 Certified Integrator",
+    "title": "Automate your business",
+    "titleHighlight": "with Bitrix24",
+    "subtitle": "Integration, development, and automation of business processes. I help companies increase efficiency through CRM, ERP, and custom solutions.",
+    "cta": "Discuss a project",
+    "ctaSecondary": "View cases"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Full range of Bitrix24 services — from consultation to implementation and support",
+    "items": [
+      {
+        "icon": "pi pi-cog",
+        "title": "Bitrix24 Integration",
+        "description": "Setup and configuration of Bitrix24 CRM, tasks, document flow, and automation from scratch, tailored to your business."
+      },
+      {
+        "icon": "pi pi-code",
+        "title": "Custom Development",
+        "description": "Development of custom applications, REST API integrations, widgets, and extensions for Bitrix24 and Bitrix Framework."
+      },
+      {
+        "icon": "pi pi-chart-line",
+        "title": "Process Automation",
+        "description": "Automation of sales, marketing, and management processes using robots, business processes, and triggers."
+      },
+      {
+        "icon": "pi pi-sync",
+        "title": "System Integration",
+        "description": "Integration of Bitrix24 with 1C, IP telephony, payment systems, marketplaces, and other external services via REST API."
+      },
+      {
+        "icon": "pi pi-users",
+        "title": "Consulting & Training",
+        "description": "Team training, development of work regulations, and consulting on effective use of the platform."
+      },
+      {
+        "icon": "pi pi-wrench",
+        "title": "Support & Maintenance",
+        "description": "Technical support, monitoring, updates, and scaling of your Bitrix24 solution after launch."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Experience and expertise in the Bitrix24 ecosystem",
+    "description": "I am a Bitrix24 developer and integrator with over 5 years of experience in implementing projects for small and medium-sized businesses. I specialize in complex automation, CRM system development, and integration with external systems.",
+    "stats": [
+      { "value": "50+", "label": "Completed Projects" },
+      { "value": "5+", "label": "Years of Experience" },
+      { "value": "30+", "label": "Happy Clients" },
+      { "value": "99%", "label": "Client Satisfaction" }
+    ],
+    "techStack": {
+      "title": "Technologies",
+      "categories": {
+        "backend": {
+          "label": "Backend",
+          "icon": "pi pi-server",
+          "skills": [
+            "PHP 8+",
+            "Bitrix Framework (D7)",
+            "Agents & Events",
+            "Business Processes",
+            "Custom Fields",
+            "Python (FastAPI)",
+            "asyncio, Pydantic",
+            "REST API",
+            "Webhooks, OAuth",
+            "Redis (queues, cache)",
+            "WebSocket"
+          ]
+        },
+        "frontend": {
+          "label": "Frontend",
+          "icon": "pi pi-desktop",
+          "skills": [
+            "Vue 3 (Composition API)",
+            "Pinia",
+            "Vue Router",
+            "Vue I18n",
+            "PrimeVue",
+            "Tailwind CSS",
+            "JavaScript (ES6+)",
+            "XLSX",
+            "Google Charts"
+          ]
+        },
+        "devops": {
+          "label": "DevOps",
+          "icon": "pi pi-cloud",
+          "skills": [
+            "Docker",
+            "docker-compose",
+            "Git",
+            "CI/CD",
+            "Linux",
+            "Bash scripts"
+          ]
+        }
+      }
+    }
+  },
+  "cases": {
+    "title": "Cases",
+    "subtitle": "Real projects and implementation results",
+    "items": [
+      {
+        "title": "CRM for a Real Estate Agency",
+        "description": "Full CRM cycle implementation: lead management, deal automation, integration with IP telephony and email. Sales cycle reduced by 40%.",
+        "tags": ["CRM", "Automation", "Telephony"],
+        "result": "Sales +40%"
+      },
+      {
+        "title": "Integration with 1C for Wholesale Company",
+        "description": "Two-way real-time synchronization of product catalog, counterparties, orders, and payments between Bitrix24 and 1C:Enterprise.",
+        "tags": ["1C", "REST API", "Synchronization"],
+        "result": "Sync time -80%"
+      },
+      {
+        "title": "Process Automation for a Production Company",
+        "description": "Development of a multi-stage approval system, automatic task creation, and KPI monitoring dashboard for 200+ employees.",
+        "tags": ["Business Processes", "KPI", "Tasks"],
+        "result": "Efficiency +60%"
+      },
+      {
+        "title": "Portal for a Service Company",
+        "description": "Corporate portal with document management, employee self-service, automated reporting, and integration with accounting systems.",
+        "tags": ["Portal", "Document Flow", "Reporting"],
+        "result": "Paperwork -70%"
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Let's discuss your project",
+    "description": "Ready to help with Bitrix24 integration and automation. Write to me in any convenient messenger — I'll respond within an hour.",
+    "email": { "label": "Email" },
+    "phone": { "label": "Phone" },
+    "telegram": { "label": "Telegram" },
+    "whatsapp": { "label": "WhatsApp" },
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "description": "Bitrix24 Developer & Integrator",
+    "rights": "All rights reserved"
+  },
+  "lang": {
+    "ru": "RU",
+    "en": "EN"
+  }
+}
