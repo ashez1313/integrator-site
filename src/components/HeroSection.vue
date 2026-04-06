@@ -14,7 +14,6 @@
       <div class="animate-fade-in-up inline-flex items-center gap-3 px-4 py-2 bg-surface-900 border border-surface-700 mb-8 font-mono">
         <span class="flex items-center gap-1.5">
           <span class="w-2 h-2 bg-green-400 animate-pulse"></span>
-          <span class="text-green-400 text-xs">online</span>
         </span>
         <span class="text-text-muted">|</span>
         <span class="text-text-secondary text-sm">{{ t('hero.badge') }}</span>
@@ -38,17 +37,24 @@
       <div class="animate-fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.3s;">
         <a
           href="#contacts"
-          class="group inline-flex items-center gap-2 px-8 py-3.5 bg-primary hover:bg-primary-dark text-surface-950 font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
+          class="group inline-flex items-center gap-2 h-11 px-6 bg-primary hover:bg-primary-light text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
         >
-          <span class="text-text-muted mr-1">$</span>
+          <span class="text-white/60 mr-0.5">~</span>
           <span>{{ t('hero.cta') }}</span>
-          <span class="animate-blink text-surface-950">_</span>
+          <span class="animate-blink text-white">_</span>
         </a>
         <a
           href="#cases"
-          class="inline-flex items-center gap-2 px-8 py-3.5 bg-surface-900 hover:bg-surface-800 text-text-primary font-semibold border border-surface-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
+          class="inline-flex items-center gap-2 h-11 px-6 bg-surface-900 hover:bg-surface-800 text-text-primary text-sm font-semibold border border-surface-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
         >
-          <span class="text-text-muted mr-1">#</span>
+          <span class="text-text-muted mr-0.5">#</span>
+          <span>{{ t('hero.ctaSecondary') }}</span>
+        </a>
+        <a
+          href="#cases"
+          class="inline-flex items-center gap-2 h-11 px-6 bg-surface-900 hover:bg-surface-800 text-text-primary text-sm font-semibold border border-surface-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
+        >
+          <span class="text-text-muted mr-0.5">#</span>
           <span>{{ t('hero.ctaSecondary') }}</span>
         </a>
       </div>

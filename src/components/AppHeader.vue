@@ -10,7 +10,7 @@
           <div class="w-8 h-8 bg-surface-800 border border-surface-700 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50">
             <span class="text-primary font-bold text-sm">&gt;_</span>
           </div>
-          <span class="text-text-primary font-semibold text-lg tracking-tight">bitrix<span class="text-primary">dev</span><span class="animate-blink text-primary"> </span></span>
+          <span class="text-text-primary font-semibold text-lg tracking-tight">ashez13<span class="text-primary">dev</span><span class="animate-blink text-primary"> </span></span>
         </a>
 
         <!-- Desktop nav -->
@@ -26,40 +26,46 @@
         </nav>
 
         <!-- Controls -->
-        <div class="flex items-center gap-2">
-          <!-- Theme toggle -->
-          <button
-            @click="toggleTheme"
-            class="w-9 h-9 flex items-center justify-center rounded border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 transition-all duration-300"
-            :title="theme === 'dark' ? 'Light mode' : 'Dark mode'"
-          >
-            <i :class="theme === 'dark' ? 'pi pi-sun' : 'pi pi-moon'" class="text-sm"></i>
-          </button>
-
-          <!-- Language switcher -->
-          <button
-            @click="toggleLang"
-            class="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 transition-all duration-300"
-          >
-            <span :class="`fi fi-${currentLang === 'ru' ? 'ru' : 'us'} fis`"></span>
-            <span>{{ currentLang === 'ru' ? 'RU' : 'EN' }}</span>
-          </button>
-
-          <!-- CTA -->
+        <div class="flex items-center gap-3">
+          <!-- CTA group -->
           <a
             href="#contacts"
-            class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark text-surface-950 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+            class="hidden sm:inline-flex items-center gap-2 h-9 px-4 bg-primary hover:bg-primary-light text-white text-xs font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
           >
             <span>~</span>
             <span>{{ t('hero.cta') }}</span>
           </a>
 
+          <!-- Divider -->
+          <div class="hidden sm:block w-px h-5 bg-surface-700"></div>
+
+          <!-- Settings group -->
+          <div class="flex items-center gap-1">
+            <!-- Theme toggle -->
+            <button
+              @click="toggleTheme"
+              class="w-9 h-9 flex items-center justify-center border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 transition-all duration-300"
+              :title="theme === 'dark' ? 'Light mode' : 'Dark mode'"
+            >
+              <i :class="theme === 'dark' ? 'pi pi-sun' : 'pi pi-moon'" class="text-sm"></i>
+            </button>
+
+            <!-- Language switcher -->
+            <button
+              @click="toggleLang"
+              class="w-9 h-9 flex items-center justify-center gap-1.5 border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 transition-all duration-300"
+              :title="currentLang === 'ru' ? 'Switch to English' : 'Переключить на русский'"
+            >
+              <span :class="`fi fi-${currentLang === 'ru' ? 'ru' : 'us'} fis`"></span>
+            </button>
+          </div>
+
           <!-- Mobile menu toggle -->
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="md:hidden w-9 h-9 flex items-center justify-center text-text-secondary hover:text-primary transition-colors"
+            class="sm:hidden w-9 h-9 flex items-center justify-center border border-surface-700 text-text-secondary hover:text-primary transition-colors"
           >
-            <i :class="mobileMenuOpen ? 'pi pi-times' : 'pi pi-bars'" class="text-lg"></i>
+            <i :class="mobileMenuOpen ? 'pi pi-times' : 'pi pi-bars'" class="text-sm"></i>
           </button>
         </div>
       </div>
