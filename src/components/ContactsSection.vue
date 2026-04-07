@@ -15,9 +15,6 @@
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4">
           {{ t('contacts.title') }}
         </h2>
-        <p class="text-text-secondary text-base max-w-2xl mx-auto">
-          {{ t('contacts.subtitle') }}
-        </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">

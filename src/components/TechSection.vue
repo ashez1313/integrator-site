@@ -10,7 +10,7 @@
         <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-900 border border-surface-700 mb-4 font-mono">
           <span class="text-text-muted">$</span>
           <span class="text-accent text-xs">cat</span>
-          <span class="text-text-secondary text-xs">./tech.json</span>
+          <span class="text-text-secondary text-xs">./skills.json</span>
         </div>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4">
           {{ t('tech.title') }}
@@ -25,7 +25,7 @@
             <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-green-500/60"></span>
-            <span class="ml-2 text-text-muted text-xs">tech.json</span>
+            <span class="ml-2 text-text-muted text-xs">skills</span>
           </div>
 
           <div class="p-6 md:p-8 space-y-6">
@@ -35,7 +35,6 @@
               class="group"
             >
               <div class="flex items-center gap-2 mb-2.5">
-                <span class="text-text-muted text-xs">→</span>
                 <i :class="category.icon" class="text-primary text-xs"></i>
                 <h4 class="text-sm font-semibold text-text-primary">{{ category.label }}</h4>
               </div>

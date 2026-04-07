@@ -73,25 +73,27 @@
       >
         <div
           v-if="lightboxOpen"
-          class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur-sm p-4"
           @click="closeLightbox"
         >
           <div
-            class="relative max-w-4xl max-h-[90vh] w-full"
+            class="flex items-start gap-4"
             @click.stop
           >
+            <div class="flex flex-col items-center gap-3">
+              <img
+                :src="`/certificates/${selectedCert?.file}`"
+                :alt="selectedCert?.name"
+                class="block max-w-[80vw] max-h-[85vh] w-auto h-auto object-contain rounded shadow-2xl"
+              />
+              <p class="text-white/50 text-xs">{{ selectedCert?.name }}</p>
+            </div>
             <button
               @click="closeLightbox"
-              class="absolute -top-10 right-0 w-8 h-8 flex items-center justify-center text-white/70 hover:text-white transition-colors"
+              class="shrink-0 w-9 h-9 flex items-center justify-center bg-surface-800 border border-surface-700 rounded text-white/70 hover:text-white hover:border-primary/50 transition-all duration-300"
             >
-              <i class="pi pi-times text-lg"></i>
+              <i class="pi pi-times text-sm"></i>
             </button>
-            <img
-              :src="`/certificates/${selectedCert?.file}`"
-              :alt="selectedCert?.name"
-              class="w-full h-full object-contain rounded"
-            />
-            <p class="text-center text-white/60 text-sm mt-3">{{ selectedCert?.name }}</p>
           </div>
         </div>
       </Transition>

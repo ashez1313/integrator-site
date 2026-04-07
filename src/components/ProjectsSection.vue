@@ -5,7 +5,7 @@
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section header -->
+      <!-- Proj section header -->
       <div class="text-center mb-16 animate-on-scroll">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-900 border border-surface-700 mb-4 font-mono">
           <span class="text-text-muted">$</span>
@@ -17,7 +17,7 @@
         </h2>
       </div>
 
-      <!-- Projects grid -->
+      <!-- Proj grid -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div
           v-for="(project, index) in projects"
@@ -56,7 +56,7 @@
                     :key="fi"
                     class="flex items-start gap-2 text-sm text-text-secondary"
                   >
-                    <span class="text-primary mt-0.5 text-xs">→</span>
+                    <span class="text-primary mt-0.5 text-xs">-</span>
                     {{ feature }}
                   </li>
                 </ul>

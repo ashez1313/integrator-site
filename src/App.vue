@@ -8,6 +8,7 @@ import TechSection from './components/TechSection.vue'
 import CertificatesSection from './components/CertificatesSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
 import AppFooter from './components/AppFooter.vue'
+import ScrollToTop from './components/ScrollToTop.vue'
 </script>
 
 <template>
@@ -23,5 +24,6 @@ import AppFooter from './components/AppFooter.vue'
       <ContactsSection />
     </main>
     <AppFooter />
+    <ScrollToTop />
   </div>
 </template>
