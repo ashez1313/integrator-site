@@ -85,6 +85,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 body {
   background-color: var(--surface-950);
   color: var(--text-primary);

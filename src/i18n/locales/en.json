@@ -1,143 +1,112 @@
 {
   "nav": {
-    "services": "Services",
     "about": "About",
-    "cases": "Cases",
+    "work": "What I Do",
+    "projects": "Projects",
+    "tech": "Tech Stack",
+    "certs": "Certificates",
     "contacts": "Contacts"
   },
   "hero": {
-    "badge": "Bitrix24 Certified Integrator",
-    "title": "Automate your business",
-    "titleHighlight": "with Bitrix24",
-    "subtitle": "Integration, development, and automation of business processes. I help companies increase efficiency through CRM, ERP, and custom solutions.",
+    "title": "Fullstack Bitrix Developer",
+    "titleHighlight": "(php, vue, python)",
+    "bullets": [
+      "D7, REST API, FastAPI, Docker",
+      "Integrations"
+    ],
     "cta": "Contact",
-    "ctaSecondary": "View cases"
-  },
-  "services": {
-    "title": "Services",
-    "subtitle": "Full range of Bitrix24 services — from consultation to implementation and support",
-    "items": [
-      {
-        "icon": "pi pi-cog",
-        "title": "Bitrix24 Integration",
-        "description": "Setup and configuration of Bitrix24 CRM, tasks, document flow, and automation from scratch, tailored to your business."
-      },
-      {
-        "icon": "pi pi-code",
-        "title": "Custom Development",
-        "description": "Development of custom applications, REST API integrations, widgets, and extensions for Bitrix24 and Bitrix Framework."
-      },
-      {
-        "icon": "pi pi-chart-line",
-        "title": "Process Automation",
-        "description": "Automation of sales, marketing, and management processes using robots, business processes, and triggers."
-      },
-      {
-        "icon": "pi pi-sync",
-        "title": "System Integration",
-        "description": "Integration of Bitrix24 with 1C, IP telephony, payment systems, marketplaces, and other external services via REST API."
-      },
-      {
-        "icon": "pi pi-users",
-        "title": "Consulting & Training",
-        "description": "Team training, development of work regulations, and consulting on effective use of the platform."
-      },
-      {
-        "icon": "pi pi-wrench",
-        "title": "Support & Maintenance",
-        "description": "Technical support, monitoring, updates, and scaling of your Bitrix24 solution after launch."
-      }
-    ]
+    "projects": "Projects",
+    "ctaSecondary": "GitHub",
+    "scroll_down": "Scroll Down"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Experience and expertise in the Bitrix24 ecosystem",
-    "description": "I am a Bitrix24 developer and integrator with over 5 years of experience in implementing projects for small and medium-sized businesses. I specialize in complex automation, CRM system development, and integration with external systems.",
-    "stats": [
-      { "value": "50+", "label": "Completed Projects" },
-      { "value": "5+", "label": "Years of Experience" },
-      { "value": "30+", "label": "Happy Clients" },
-      { "value": "99%", "label": "Client Satisfaction" }
-    ],
-    "techStack": {
-      "title": "Technologies",
-      "categories": {
-        "backend": {
-          "label": "Backend",
-          "icon": "pi pi-server",
-          "skills": [
-            "PHP 8+",
-            "Bitrix Framework (D7)",
-            "Agents & Events",
-            "Business Processes",
-            "Custom Fields",
-            "Python (FastAPI)",
-            "asyncio, Pydantic",
-            "REST API",
-            "Webhooks, OAuth",
-            "Redis (queues, cache)",
-            "WebSocket"
-          ]
-        },
-        "frontend": {
-          "label": "Frontend",
-          "icon": "pi pi-desktop",
-          "skills": [
-            "Vue 3 (Composition API)",
-            "Pinia",
-            "Vue Router",
-            "Vue I18n",
-            "PrimeVue",
-            "Tailwind CSS",
-            "JavaScript (ES6+)",
-            "XLSX",
-            "Google Charts"
-          ]
-        },
-        "devops": {
-          "label": "DevOps",
-          "icon": "pi pi-cloud",
-          "skills": [
-            "Docker",
-            "docker-compose",
-            "Git",
-            "CI/CD",
-            "Linux",
-            "Bash scripts"
-          ]
-        }
+    "description": "I'm a fullstack developer focused on backend and integrations for Bitrix24. I work with PHP (D7, Symfony), Python (FastAPI), Vue 3, and Docker.",
+    "description2": "I have experience integrating with external services, automating business processes, Linux system administration, and building end-to-end solutions: from UI to backend logic and infrastructure."
+  },
+  "work": {
+    "title": "What I Do",
+    "items": [
+      {
+        "icon": "pi pi-database",
+        "title": "Backend Development",
+        "description": "Developing modules and components for Bitrix24 (on-premise), cloud applications. Also building chatbots, parsers, and LLM integrations."
+      },
+      {
+        "icon": "pi pi-sync",
+        "title": "Async Systems",
+        "description": "Implementing background tasks, queues, and data processing with progress and status tracking (agents, queues)."
+      },
+      {
+        "icon": "pi pi-arrow-right-arrow-left",
+        "title": "Integrations",
+        "description": "Integration with other CRMs, external APIs, bots, and third-party services."
+      },
+      {
+        "icon": "pi pi-desktop",
+        "title": "Fullstack Development",
+        "description": "Building interfaces with Vue 3 and connecting them to the backend."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "Async Transcription System",
+        "description": "Audio and video processing system with async task queue and real-time status updates",
+        "features": [
+          "FastAPI backend",
+          "Async task processing",
+          "WebSocket for progress",
+          "Whisper / yt-dlp integration",
+          "Vue frontend"
+        ],
+        "tags": ["Python", "FastAPI", "Vue 3", "WebSocket", "Docker"]
+      },
+      {
+        "title": "Bitrix24 Automation & Integration",
+        "description": "Business process automation and Bitrix24 integration with external services",
+        "features": [
+          "Event handling",
+          "API integration",
+          "Scenario automation",
+          "Backend logic"
+        ],
+        "tags": ["PHP", "Bitrix D7", "REST API"]
+      }
+    ]
+  },
+  "tech": {
+    "title": "Tech Stack",
+    "categories": {
+      "backend": {
+        "label": "Backend",
+        "icon": "pi pi-server",
+        "skills": ["PHP (Bitrix D7, Symfony)", "Python (FastAPI)"]
+      },
+      "frontend": {
+        "label": "Frontend",
+        "icon": "pi pi-desktop",
+        "skills": ["Vue 3", "Pinia", "PrimeVue", "Tailwind"]
+      },
+      "infra": {
+        "label": "Infrastructure",
+        "icon": "pi pi-cloud",
+        "skills": ["Docker", "Redis"]
+      },
+      "other": {
+        "label": "Other",
+        "icon": "pi pi-cog",
+        "skills": ["REST API", "Integrations", "Automation"]
       }
     }
   },
-  "cases": {
-    "title": "Cases",
-    "subtitle": "Real projects and implementation results",
-    "items": [
-      {
-        "title": "CRM for a Real Estate Agency",
-        "description": "Full CRM cycle implementation: lead management, deal automation, integration with IP telephony and email. Sales cycle reduced by 40%.",
-        "tags": ["CRM", "Automation", "Telephony"],
-        "result": "Sales +40%"
-      },
-      {
-        "title": "Integration with 1C for Wholesale Company",
-        "description": "Two-way real-time synchronization of product catalog, counterparties, orders, and payments between Bitrix24 and 1C:Enterprise.",
-        "tags": ["1C", "REST API", "Synchronization"],
-        "result": "Sync time -80%"
-      },
-      {
-        "title": "Process Automation for a Production Company",
-        "description": "Development of a multi-stage approval system, automatic task creation, and KPI monitoring dashboard for 200+ employees.",
-        "tags": ["Business Processes", "KPI", "Tasks"],
-        "result": "Efficiency +60%"
-      },
-      {
-        "title": "Portal for a Service Company",
-        "description": "Corporate portal with document management, employee self-service, automated reporting, and integration with accounting systems.",
-        "tags": ["Portal", "Document Flow", "Reporting"],
-        "result": "Paperwork -70%"
-      }
-    ]
+  "certs": {
+    "title": "Certificates",
+    "profileLink": "https://training.bitrix24.ru/profile/123456/",
+    "profileText": "Bitrix24 Profile",
+    "disclaimer": "Certificates confirm practical experience, but the main focus is on real projects"
   },
   "contacts": {
     "title": "Contacts",
@@ -155,7 +124,7 @@
     }
   },
   "footer": {
-    "description": "Bitrix24 Developer & Integrator",
+    "description": "Fullstack Bitrix Developer",
     "rights": "All rights reserved"
   },
   "lang": {

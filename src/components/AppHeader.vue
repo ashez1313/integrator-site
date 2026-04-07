@@ -121,10 +121,11 @@ const toggleLang = () => {
 }
 
 const navItems = computed(() => [
-  { id: 'services', label: t('nav.services') },
   { id: 'about', label: t('nav.about') },
-  { id: 'cases', label: t('nav.cases') },
-  { id: 'contacts', label: t('nav.contacts') },
+  { id: 'work', label: t('nav.work') },
+  { id: 'projects', label: t('nav.projects') },
+  { id: 'tech', label: t('nav.tech') },
+  { id: 'certs', label: t('nav.certs') },
 ])
 
 const handleScroll = () => {

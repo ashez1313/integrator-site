@@ -10,52 +10,52 @@
     <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 60px 60px;"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <!-- Terminal-style badge -->
-      <div class="animate-fade-in-up inline-flex items-center gap-3 px-4 py-2 bg-surface-900 border border-surface-700 mb-8 font-mono">
-        <span class="flex items-center gap-1.5">
-          <span class="w-2 h-2 bg-green-400 animate-pulse"></span>
-        </span>
-        <span class="text-text-muted">|</span>
-        <span class="text-text-secondary text-sm">{{ t('hero.badge') }}</span>
-      </div>
-
       <!-- Title -->
-      <h1 class="animate-fade-in-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style="animation-delay: 0.1s;">
+      <h1 class="animate-fade-in-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6" style="animation-delay: 0.1s;">
         <span class="text-text-primary">{{ t('hero.title') }}</span>
         <br />
-        <span class="bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent animate-gradient">
+        <span class="bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent animate-gradient text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           {{ t('hero.titleHighlight') }}
         </span>
       </h1>
 
-      <!-- Subtitle -->
-      <p class="animate-fade-in-up text-text-secondary text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay: 0.2s;">
-        {{ t('hero.subtitle') }}
-      </p>
+      <!-- Bullets -->
+      <div class="animate-fade-in-up flex flex-wrap items-center justify-center gap-3 mb-10" style="animation-delay: 0.2s;">
+        <span
+          v-for="(bullet, i) in bullets"
+          :key="i"
+          class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-900 border border-surface-700 text-text-secondary text-sm"
+        >
+          <span class="text-primary text-xs">◆</span>
+          {{ bullet }}
+        </span>
+      </div>
 
       <!-- CTA Buttons -->
       <div class="animate-fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.3s;">
         <a
-          href="#contacts"
+          href="#projects"
           class="group inline-flex items-center gap-2 h-11 px-6 bg-primary hover:bg-primary-light text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
         >
-          <i class="pi pi-envelope"></i>
-          <span>{{ t('hero.cta') }}</span>
+          <span class="text-white/60 mr-0.5">~</span>
+          <span>{{ t('hero.projects') }}</span>
           <span class="animate-blink text-white">_</span>
         </a>
         <a
-          href="#cases"
+          href="https://github.com/ashez1313"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center gap-2 h-11 px-6 bg-surface-900 hover:bg-surface-800 text-text-primary text-sm font-semibold border border-surface-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
         >
-          <span class="text-text-muted mr-0.5">#</span>
+          <i class="pi pi-github text-sm"></i>
           <span>{{ t('hero.ctaSecondary') }}</span>
         </a>
       </div>
 
       <!-- Scroll indicator -->
       <div class="animate-fade-in-up mt-16" style="animation-delay: 0.5s;">
-        <a href="#services" class="inline-flex flex-col items-center text-text-muted hover:text-primary transition-colors">
-          <span class="text-xs mb-2 tracking-widest uppercase">scroll down</span>
+        <a href="#about" class="inline-flex flex-col items-center text-text-muted hover:text-primary transition-colors">
+          <span class="text-xs mb-2 tracking-widest uppercase">{{ t('hero.scroll_down') }}</span>
           <span class="text-lg">▼</span>
         </a>
       </div>
@@ -64,7 +64,9 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
+const bullets = computed(() => tm('hero.bullets'))
 </script>
