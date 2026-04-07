@@ -237,7 +237,7 @@ const contactData = {
   phone: '+7 (921) 927-45-00',
   phoneClean: '79219274500',
   telegram: '@Ashez1313',
-  telegramUrl: 'https://t.me/bitrix_dev',
+  telegramUrl: 'https://t.me/Ashez1313',
 }
 
 const contacts = computed(() => contactData)
