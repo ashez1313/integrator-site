@@ -230,7 +230,7 @@ import Button from 'primevue/button'
 const { t } = useI18n()
 useScrollAnimation()
 
-const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_WEBHOOK_URL || ''
+const FORMSPREE_URL = 'https://formspree.io/f/mgopdzao'
 
 const contactData = {
   email: 'aishalapanov@gmail.com',
