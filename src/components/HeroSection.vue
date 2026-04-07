@@ -37,7 +37,7 @@
           href="#projects"
           class="group inline-flex items-center gap-2 h-11 px-6 bg-primary hover:bg-primary-light text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
         >
-          <span class="text-white/60 mr-0.5">~</span>
+          <span class="pi pi-briefcase"></span>
           <span>{{ t('hero.projects') }}</span>
           <span class="animate-blink text-white">_</span>
         </a>

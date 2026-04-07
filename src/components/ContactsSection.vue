@@ -69,20 +69,6 @@
               </div>
             </a>
 
-            <a
-              :href="contacts.whatsappUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group flex items-center gap-4 p-4 bg-surface-900 border border-surface-700 hover:border-primary/40 transition-all duration-300 hover:-translate-x-1"
-            >
-              <div class="w-9 h-9 flex items-center justify-center bg-surface-800 border border-surface-700 group-hover:border-primary/40 transition-colors">
-                <i class="pi pi-whatsapp text-primary text-sm"></i>
-              </div>
-              <div>
-                <div class="text-xs text-text-muted mb-0.5">{{ t('contacts.whatsapp.label') }}</div>
-                <div class="text-text-primary text-sm font-mono group-hover:text-primary transition-colors">{{ contacts.whatsapp }}</div>
-              </div>
-            </a>
           </div>
         </div>
 

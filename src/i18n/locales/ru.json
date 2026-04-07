@@ -8,8 +8,8 @@
     "contacts": "Контакты"
   },
   "hero": {
-    "title": "Fullstack Bitrix Developer",
-    "titleHighlight": "(php, vue, python)",
+    "title": "Fullstack Bitrix разработчик / Интегратор Bitrix24",
+    "titleHighlight": "(PHP, Vue3, Python)",
     "bullets": [
       "D7, REST API, FastAPI, Docker",
       "Интеграции"
@@ -104,14 +104,14 @@
   },
   "certs": {
     "title": "Сертификаты",
-    "profileLink": "https://training.bitrix24.ru/profile/123456/",
+    "profileLink": "https://dev.1c-bitrix.ru/learning/resume.php?ID=12992855-7329280",
     "profileText": "Профиль в Битрикс24",
     "disclaimer": "Сертификаты подтверждают практический опыт, но основной фокус — на реальных проектах"
   },
   "contacts": {
     "title": "Контакты",
     "subtitle": "Давайте обсудим ваш проект",
-    "description": "Готов помочь с интеграцией и автоматизацией Bitrix24. Напишите мне в любой удобный мессенджер — отвечу в течение часа.",
+    "description": "Готов помочь с интеграцией и автоматизацией Bitrix24. Вы можете связаться со мной через любой удобный мессенджер или через контактную форму.",
     "email": { "label": "Email" },
     "phone": { "label": "Телефон" },
     "telegram": { "label": "Telegram" },
@@ -124,7 +124,7 @@
     }
   },
   "footer": {
-    "description": "Fullstack Bitrix Developer",
+    "description": "ashez1313",
     "rights": "Все права защищены"
   },
   "lang": {

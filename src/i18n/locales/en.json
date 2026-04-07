@@ -8,8 +8,8 @@
     "contacts": "Contacts"
   },
   "hero": {
-    "title": "Fullstack Bitrix Developer",
-    "titleHighlight": "(php, vue, python)",
+    "title": "Fullstack Bitrix Developer / Bitrix24 Integrator",
+    "titleHighlight": "(PHP, Vue3, Python)",
     "bullets": [
       "D7, REST API, FastAPI, Docker",
       "Integrations"
@@ -104,14 +104,14 @@
   },
   "certs": {
     "title": "Certificates",
-    "profileLink": "https://training.bitrix24.ru/profile/123456/",
+    "profileLink": "https://dev.1c-bitrix.ru/learning/resume.php?ID=12992855-7329280",
     "profileText": "Bitrix24 Profile",
     "disclaimer": "Certificates confirm practical experience, but the main focus is on real projects"
   },
   "contacts": {
     "title": "Contacts",
     "subtitle": "Let's discuss your project",
-    "description": "Ready to help with Bitrix24 integration and automation. Write to me in any convenient messenger — I'll respond within an hour.",
+    "description": "Ready to help with Bitrix24 integration and automation. Please write to me in any convenient messenger",
     "email": { "label": "Email" },
     "phone": { "label": "Phone" },
     "telegram": { "label": "Telegram" },
@@ -124,7 +124,7 @@
     }
   },
   "footer": {
-    "description": "Fullstack Bitrix Developer",
+    "description": "ashez1313",
     "rights": "All rights reserved"
   },
   "lang": {

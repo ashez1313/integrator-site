@@ -7,7 +7,7 @@
           <div class="w-7 h-7 bg-surface-800 border border-surface-700 flex items-center justify-center">
             <span class="text-primary font-bold text-xs">&gt;_</span>
           </div>
-          <span class="text-text-primary font-semibold tracking-tight">bitrix<span class="text-primary">dev</span></span>
+          <span class="text-text-primary font-semibold tracking-tight">ashez1313<span class="text-primary">dev</span></span>
         </div>
 
         <!-- Description -->

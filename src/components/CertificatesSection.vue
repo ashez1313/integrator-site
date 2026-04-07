@@ -110,12 +110,14 @@ useScrollAnimation()
 const lightboxOpen = ref(false)
 const selectedCert = ref(null)
 
-// Certificate files from /public/certificates/
-// Priority: lower number = shown first
 const certificateFiles = [
-  { file: '1-bitrix-crm.svg', name: 'Bitrix24 CRM' },
-  { file: '2-bitrix-dev.svg', name: 'Bitrix24 Developer' },
-  { file: '3-bitrix-admin.svg', name: 'Bitrix24 Administrator' },
+  { file: '01_exam_design.webp', name: 'B24 Exam' },
+  { file: '02_developer.webp', name: 'B24 Developer' },
+  { file: '03_dev_vue.webp', name: 'B24 Vue JS' },
+  { file: '04_administrator_basic.webp', name: 'B24 Administrator Basic' },
+  { file: '05_administrator_modules.webp', name: 'B24 Administrator Modules' },
+  { file: '06_bizproc.webp', name: 'B24 Business Processes' },
+  { file: '07_administrator_setup.webp', name: 'B24 Install and Setup' },
 ]
 
 const certificates = computed(() => certificateFiles)

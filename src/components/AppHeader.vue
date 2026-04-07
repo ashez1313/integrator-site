@@ -10,7 +10,7 @@
           <div class="w-8 h-8 bg-surface-800 border border-surface-700 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50">
             <span class="text-primary font-bold text-sm">&gt;_</span>
           </div>
-          <span class="text-text-primary font-semibold text-lg tracking-tight">ashez13<span class="text-primary">dev</span><span class="animate-blink text-primary"> </span></span>
+          <span class="text-text-primary font-semibold text-lg tracking-tight">ashez1313<span class="text-primary">dev</span><span class="animate-blink text-primary"> </span></span>
         </a>
 
         <!-- Desktop nav -->
