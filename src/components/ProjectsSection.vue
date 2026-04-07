@@ -63,7 +63,7 @@
               </div>
 
               <!-- Tags -->
-              <div class="flex flex-wrap gap-1.5">
+              <div class="flex flex-wrap gap-1.5 mb-5">
                 <span
                   v-for="(tag, ti) in project.tags"
                   :key="ti"
@@ -72,6 +72,19 @@
                   {{ tag }}
                 </span>
               </div>
+
+              <!-- GitHub link -->
+              <a
+                v-if="project.url"
+                :href="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-surface-800 border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 text-sm transition-all duration-300"
+              >
+                <i class="pi pi-github text-xs"></i>
+                <span>GitHub</span>
+                <i class="pi pi-external-link text-[10px] text-text-muted"></i>
+              </a>
             </div>
           </div>
         </div>
