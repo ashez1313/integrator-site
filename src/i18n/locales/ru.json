@@ -53,27 +53,64 @@
     "title": "Проекты",
     "items": [
       {
-        "title": "Async Transcription System",
-        "description": "Система обработки аудио и видео с асинхронной очередью задач и обновлением статуса в реальном времени",
+        "title": "Bitrix24 Helpdesk Bot",
+        "description": "Асинхронный бот техподдержки для Bitrix24 с обработкой событий через очередь и расширяемой архитектурой",
         "features": [
-          "Backend на FastAPI",
-          "Асинхронная обработка задач",
-          "WebSocket для прогресса",
-          "Интеграция Whisper / yt-dlp",
-          "Frontend на Vue"
+          "Работа с imbot.v2 API",
+          "Очередь событий на Redis",
+          "Retry и rate limit",
+          "Командная архитектура",
+          "Мультиязычные сообщения",
+          "Интеграция с CRM (тикеты)"
         ],
-        "tags": ["Python", "FastAPI", "Vue 3", "WebSocket", "Docker"]
+        "tags": [
+          "Python",
+          "Bitrix24",
+          "Redis",
+          "Docker",
+          "DDD"
+        ],
+        "url": "https://github.com/ashez1313/b24_helpdesk_bot"
       },
       {
-        "title": "Bitrix24 Automation & Integration",
-        "description": "Автоматизация бизнес-процессов и интеграция Bitrix24 с внешними сервисами",
+        "title": "Tilda Bitrix24 Integration",
+        "description": "Модуль для интеграции форм Tilda с CRM Bitrix24 с поддержкой загрузки и прикрепления файлов через Яндекс.Диск",
         "features": [
-          "Обработка событий",
-          "Интеграция API",
-          "Автоматизация сценариев",
-          "Backend-логика"
+          "Приём webhook из Tilda",
+          "Создание лидов и сделок",
+          "Автосоздание и привязка контактов",
+          "Загрузка файлов через Яндекс.Диск API",
+          "Прикрепление файлов к CRM",
+          "Логирование действий и ошибок"
         ],
-        "tags": ["PHP", "Bitrix D7", "REST API"]
+        "tags": [
+          "PHP",
+          "Bitrix24",
+          "Tilda",
+          "Yandex Disk API",
+          "CRM"
+        ],
+        "url": "https://github.com/ashez1313/b24_tilda_module"
+      },
+      {
+        "title": "LM Utils",
+        "description": "Приложение для транскрибации аудио и видео с использованием локальных моделей и веб-интерфейсом",
+        "features": [
+          "Транскрибация через Whisper",
+          "Поддержка YouTube (yt-dlp)",
+          "Web UI на Vue 3",
+          "WebSocket для прогресса",
+          "Bearer API",
+          "Автоопределение GPU (CUDA/MPS/ROCm)"
+        ],
+        "tags": [
+          "Python",
+          "FastAPI",
+          "Vue 3",
+          "Whisper",
+          "WebSocket"
+        ],
+        "url": "https://github.com/ashez1313/lm-utils"
       }
     ]
   },
@@ -83,22 +120,37 @@
       "backend": {
         "label": "Backend",
         "icon": "pi pi-server",
-        "skills": ["PHP (Bitrix D7, Symfony)", "Python (FastAPI)"]
+        "skills": [
+          "PHP (Bitrix D7, Symfony)",
+          "Python (FastAPI)"
+        ]
       },
       "frontend": {
         "label": "Frontend",
         "icon": "pi pi-desktop",
-        "skills": ["Vue 3", "Pinia", "PrimeVue", "Tailwind"]
+        "skills": [
+          "Vue 3",
+          "Pinia",
+          "PrimeVue",
+          "Tailwind"
+        ]
       },
       "infra": {
         "label": "Infrastructure",
         "icon": "pi pi-cloud",
-        "skills": ["Docker", "Redis"]
+        "skills": [
+          "Docker",
+          "Redis"
+        ]
       },
       "other": {
         "label": "Other",
         "icon": "pi pi-cog",
-        "skills": ["REST API", "Интеграции", "Автоматизация"]
+        "skills": [
+          "REST API",
+          "Интеграции",
+          "Автоматизация"
+        ]
       }
     }
   },
@@ -111,11 +163,19 @@
   "contacts": {
     "title": "Контакты",
     "subtitle": "Давайте обсудим ваш проект",
-    "description": "Готов помочь с интеграцией и автоматизацией Bitrix24. Вы можете связаться со мной через любой удобный мессенджер или через контактную форму.",
-    "email": { "label": "Email" },
-    "phone": { "label": "Телефон" },
-    "telegram": { "label": "Telegram" },
-    "whatsapp": { "label": "WhatsApp" },
+    "description": "Готов помочь с интеграцией и автоматизацией Bitrix24 и других CRM. Вы можете связаться со мной через любой удобный мессенджер или через контактную форму.",
+    "email": {
+      "label": "Email"
+    },
+    "phone": {
+      "label": "Телефон"
+    },
+    "telegram": {
+      "label": "Telegram"
+    },
+    "whatsapp": {
+      "label": "WhatsApp"
+    },
     "form": {
       "name": "Ваше имя",
       "email": "Email",

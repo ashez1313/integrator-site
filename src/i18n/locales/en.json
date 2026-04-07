@@ -53,27 +53,64 @@
     "title": "Projects",
     "items": [
       {
-        "title": "Async Transcription System",
-        "description": "Audio and video processing system with async task queue and real-time status updates",
+        "title": "Bitrix24 Helpdesk Bot",
+        "description": "Asynchronous helpdesk bot for Bitrix24 with event queue processing and scalable architecture",
         "features": [
-          "FastAPI backend",
-          "Async task processing",
-          "WebSocket for progress",
-          "Whisper / yt-dlp integration",
-          "Vue frontend"
+          "imbot.v2 API integration",
+          "Redis-based event queue",
+          "Retry and rate limiting",
+          "Command-based architecture",
+          "Multilingual messages",
+          "CRM integration (tickets)"
         ],
-        "tags": ["Python", "FastAPI", "Vue 3", "WebSocket", "Docker"]
+        "tags": [
+          "Python",
+          "Bitrix24",
+          "Redis",
+          "Docker",
+          "DDD"
+        ],
+        "url": "https://github.com/ashez1313/b24_helpdesk_bot"
       },
       {
-        "title": "Bitrix24 Automation & Integration",
-        "description": "Business process automation and Bitrix24 integration with external services",
+        "title": "Tilda Bitrix24 Integration",
+        "description": "Module for integrating Tilda forms with Bitrix24 CRM including file upload via Yandex Disk",
         "features": [
-          "Event handling",
-          "API integration",
-          "Scenario automation",
-          "Backend logic"
+          "Tilda webhook handling",
+          "Lead and deal creation",
+          "Automatic contact management",
+          "File download via Yandex Disk API",
+          "Attach files to CRM entities",
+          "Logging of operations and errors"
         ],
-        "tags": ["PHP", "Bitrix D7", "REST API"]
+        "tags": [
+          "PHP",
+          "Bitrix24",
+          "Tilda",
+          "Yandex Disk API",
+          "CRM"
+        ],
+        "url": "https://github.com/ashez1313/b24_tilda_module"
+      },
+      {
+        "title": "LM Utils",
+        "description": "Application for audio and video transcription using local models with a web interface",
+        "features": [
+          "Whisper-based transcription",
+          "YouTube support (yt-dlp)",
+          "Vue 3 web interface",
+          "Real-time progress via WebSocket",
+          "Bearer token API",
+          "Automatic GPU detection (CUDA/MPS/ROCm)"
+        ],
+        "tags": [
+          "Python",
+          "FastAPI",
+          "Vue 3",
+          "Whisper",
+          "WebSocket"
+        ],
+        "url": "https://github.com/ashez1313/lm-utils"
       }
     ]
   },
@@ -83,22 +120,37 @@
       "backend": {
         "label": "Backend",
         "icon": "pi pi-server",
-        "skills": ["PHP (Bitrix D7, Symfony)", "Python (FastAPI)"]
+        "skills": [
+          "PHP (Bitrix D7, Symfony)",
+          "Python (FastAPI)"
+        ]
       },
       "frontend": {
         "label": "Frontend",
         "icon": "pi pi-desktop",
-        "skills": ["Vue 3", "Pinia", "PrimeVue", "Tailwind"]
+        "skills": [
+          "Vue 3",
+          "Pinia",
+          "PrimeVue",
+          "Tailwind"
+        ]
       },
       "infra": {
         "label": "Infrastructure",
         "icon": "pi pi-cloud",
-        "skills": ["Docker", "Redis"]
+        "skills": [
+          "Docker",
+          "Redis"
+        ]
       },
       "other": {
         "label": "Other",
         "icon": "pi pi-cog",
-        "skills": ["REST API", "Integrations", "Automation"]
+        "skills": [
+          "REST API",
+          "Integrations",
+          "Automation"
+        ]
       }
     }
   },
@@ -112,10 +164,18 @@
     "title": "Contacts",
     "subtitle": "Let's discuss your project",
     "description": "Ready to help with Bitrix24 integration and automation. Please write to me in any convenient messenger",
-    "email": { "label": "Email" },
-    "phone": { "label": "Phone" },
-    "telegram": { "label": "Telegram" },
-    "whatsapp": { "label": "WhatsApp" },
+    "email": {
+      "label": "Email"
+    },
+    "phone": {
+      "label": "Phone"
+    },
+    "telegram": {
+      "label": "Telegram"
+    },
+    "whatsapp": {
+      "label": "WhatsApp"
+    },
     "form": {
       "name": "Your name",
       "email": "Email",
