@@ -71,7 +71,7 @@
 
         <!-- Contact form -->
         <div class="animate-on-scroll delay-2">
-          <form @submit.prevent="submitForm" class="bg-surface-900 border border-surface-700">
+          <div class="bg-surface-900 border border-surface-700">
             <!-- Terminal bar -->
             <div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-surface-700">
               <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
@@ -80,53 +80,139 @@
               <span class="ml-2 text-text-muted text-xs">message.sh</span>
             </div>
 
-            <div class="p-5 md:p-6 space-y-4">
-              <div>
-                <label class="block text-xs font-mono text-text-muted mb-1.5">
-                  <span class="text-primary">$</span> {{ t('contacts.form.name') }}
-                </label>
-                <InputText
-                  v-model="form.name"
-                  type="text"
-                  class="w-full"
-                  :placeholder="t('contacts.form.name')"
-                />
-              </div>
+            <div class="p-5 md:p-6">
+              <!-- Success state -->
+              <Transition
+                enter-active-class="transition duration-300 ease-out"
+                enter-from-class="opacity-0 translate-y-2"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition duration-200 ease-in"
+                leave-from-class="opacity-100 translate-y-0"
+                leave-to-class="opacity-0 translate-y-2"
+              >
+                <div v-if="submitStatus === 'success'" class="text-center py-8">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
+                    <i class="pi pi-check-circle text-green-400 text-3xl"></i>
+                  </div>
+                  <h3 class="text-lg font-semibold text-text-primary mb-2">
+                    {{ t('contacts.form.successTitle') }}
+                  </h3>
+                  <p class="text-text-secondary text-sm mb-6">
+                    {{ t('contacts.form.successMessage') }}
+                  </p>
+                  <button
+                    @click="resetForm"
+                    class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-800 border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 text-sm transition-all duration-300"
+                  >
+                    <i class="pi pi-plus text-xs"></i>
+                    {{ t('contacts.form.sendAnother') }}
+                  </button>
+                </div>
+              </Transition>
 
-              <div>
-                <label class="block text-xs font-mono text-text-muted mb-1.5">
-                  <span class="text-primary">$</span> {{ t('contacts.form.email') }}
-                </label>
-                <InputText
-                  v-model="form.email"
-                  type="email"
-                  class="w-full"
-                  :placeholder="t('contacts.form.email')"
-                />
-              </div>
+              <!-- Error state -->
+              <Transition
+                enter-active-class="transition duration-300 ease-out"
+                enter-from-class="opacity-0 translate-y-2"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition duration-200 ease-in"
+                leave-from-class="opacity-100 translate-y-0"
+                leave-to-class="opacity-0 translate-y-2"
+              >
+                <div v-if="submitStatus === 'error'" class="text-center py-8">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center">
+                    <i class="pi pi-times-circle text-red-400 text-3xl"></i>
+                  </div>
+                  <h3 class="text-lg font-semibold text-text-primary mb-2">
+                    {{ t('contacts.form.errorTitle') }}
+                  </h3>
+                  <p class="text-text-secondary text-sm mb-6">
+                    {{ t('contacts.form.errorMessage') }}
+                  </p>
+                  <button
+                    @click="submitStatus = null"
+                    class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-800 border border-surface-700 text-text-secondary hover:text-primary hover:border-primary/50 text-sm transition-all duration-300"
+                  >
+                    <i class="pi pi-refresh text-xs"></i>
+                    {{ t('contacts.form.tryAgain') }}
+                  </button>
+                </div>
+              </Transition>
 
-              <div>
-                <label class="block text-xs font-mono text-text-muted mb-1.5">
-                  <span class="text-primary">$</span> {{ t('contacts.form.message') }}
-                </label>
-                <Textarea
-                  v-model="form.message"
-                  rows="4"
-                  class="w-full"
-                  :placeholder="t('contacts.form.message')"
-                />
-              </div>
+              <!-- Form -->
+              <form v-if="submitStatus !== 'success'" @submit.prevent="submitForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-mono text-text-muted mb-1.5">
+                    <span class="text-primary">$</span> {{ t('contacts.form.name') }}
+                    <span v-if="errors.name" class="text-red-400 ml-1">*</span>
+                  </label>
+                  <InputText
+                    v-model="form.name"
+                    type="text"
+                    class="w-full"
+                    :class="{ 'border-red-500/50': errors.name }"
+                    :placeholder="t('contacts.form.name')"
+                    :disabled="isSubmitting"
+                  />
+                  <p v-if="errors.name" class="text-red-400 text-xs mt-1">{{ errors.name }}</p>
+                </div>
 
-              <Button
-                type="submit"
-                :label="t('contacts.form.send')"
-                icon="pi pi-send"
-                class="w-full"
-                severity="primary"
-                size="large"
-              />
+                <div>
+                  <label class="block text-xs font-mono text-text-muted mb-1.5">
+                    <span class="text-primary">$</span> {{ t('contacts.form.email') }}
+                    <span v-if="errors.email" class="text-red-400 ml-1">*</span>
+                  </label>
+                  <InputText
+                    v-model="form.email"
+                    type="email"
+                    class="w-full"
+                    :class="{ 'border-red-500/50': errors.email }"
+                    :placeholder="t('contacts.form.email')"
+                    :disabled="isSubmitting"
+                  />
+                  <p v-if="errors.email" class="text-red-400 text-xs mt-1">{{ errors.email }}</p>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-text-muted mb-1.5">
+                    <span class="text-primary">$</span> {{ t('contacts.form.message') }}
+                    <span v-if="errors.message" class="text-red-400 ml-1">*</span>
+                  </label>
+                  <Textarea
+                    v-model="form.message"
+                    rows="4"
+                    class="w-full"
+                    :class="{ 'border-red-500/50': errors.message }"
+                    :placeholder="t('contacts.form.message')"
+                    :disabled="isSubmitting"
+                  />
+                  <p v-if="errors.message" class="text-red-400 text-xs mt-1">{{ errors.message }}</p>
+                </div>
+
+                <!-- Form-level error -->
+                <Transition
+                  enter-active-class="transition duration-300 ease-out"
+                  enter-from-class="opacity-0 -translate-y-1"
+                  enter-to-class="opacity-100 translate-y-0"
+                  leave-active-class="transition duration-200 ease-in"
+                  leave-from-class="opacity-100 translate-y-0"
+                  leave-to-class="opacity-0 translate-y-2"
+                >
+                  <p v-if="formError" class="text-red-400 text-xs">{{ formError }}</p>
+                </Transition>
+
+                <Button
+                  type="submit"
+                  :label="isSubmitting ? t('contacts.form.sending') : t('contacts.form.send')"
+                  :icon="isSubmitting ? 'pi pi-spin pi-spinner' : 'pi pi-send'"
+                  :disabled="isSubmitting"
+                  class="w-full"
+                  severity="primary"
+                  size="large"
+                />
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -134,7 +220,7 @@
 </template>
 
 <script setup>
-import { reactive, computed } from 'vue'
+import { reactive, ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '../composables/useScrollAnimation'
 import InputText from 'primevue/inputtext'
@@ -144,14 +230,14 @@ import Button from 'primevue/button'
 const { t } = useI18n()
 useScrollAnimation()
 
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_WEBHOOK_URL || ''
+
 const contactData = {
   email: 'hello@bitrix-dev.ru',
   phone: '+7 (999) 123-45-67',
   phoneClean: '79991234567',
   telegram: '@bitrix_dev',
   telegramUrl: 'https://t.me/bitrix_dev',
-  whatsapp: '+7 (999) 123-45-67',
-  whatsappUrl: 'https://wa.me/79991234567',
 }
 
 const contacts = computed(() => contactData)
@@ -162,10 +248,93 @@ const form = reactive({
   message: '',
 })
 
-const submitForm = () => {
-  console.log('Form submitted:', form)
+const errors = reactive({})
+const isSubmitting = ref(false)
+const submitStatus = ref(null)
+const formError = ref('')
+
+function validate() {
+  errors.name = ''
+  errors.email = ''
+  errors.message = ''
+  let valid = true
+
+  if (!form.name.trim()) {
+    errors.name = t('contacts.form.errors.nameRequired')
+    valid = false
+  } else if (form.name.trim().length < 2) {
+    errors.name = t('contacts.form.errors.nameMin')
+    valid = false
+  }
+
+  if (!form.email.trim()) {
+    errors.email = t('contacts.form.errors.emailRequired')
+    valid = false
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    errors.email = t('contacts.form.errors.emailInvalid')
+    valid = false
+  }
+
+  if (!form.message.trim()) {
+    errors.message = t('contacts.form.errors.messageRequired')
+    valid = false
+  } else if (form.message.trim().length < 10) {
+    errors.message = t('contacts.form.errors.messageMin')
+    valid = false
+  }
+
+  return valid
+}
+
+async function submitForm() {
+  formError.value = ''
+
+  if (!validate()) return
+
+  isSubmitting.value = true
+
+  try {
+    const response = await fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+      }),
+    })
+
+    if (response.ok) {
+      submitStatus.value = 'success'
+      form.name = ''
+      form.email = ''
+      form.message = ''
+    } else {
+      const data = await response.json().catch(() => ({}))
+      formError.value = data.errors
+        ? data.errors.map((e) => e.message).join(', ')
+        : t('contacts.form.errors.serverError')
+      submitStatus.value = 'error'
+    }
+  } catch {
+    formError.value = t('contacts.form.errors.networkError')
+    submitStatus.value = 'error'
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
+function resetForm() {
+  submitStatus.value = null
   form.name = ''
   form.email = ''
   form.message = ''
+  errors.name = ''
+  errors.email = ''
+  errors.message = ''
+  formError.value = ''
 }
 </script>

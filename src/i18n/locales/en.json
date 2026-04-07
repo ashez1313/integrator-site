@@ -180,7 +180,24 @@
       "name": "Your name",
       "email": "Email",
       "message": "Message",
-      "send": "Send"
+      "send": "Send",
+      "sending": "Sending...",
+      "successTitle": "Message sent",
+      "successMessage": "Thank you! I'll get back to you soon.",
+      "sendAnother": "Send another",
+      "errorTitle": "Sending failed",
+      "errorMessage": "Could not send the message. Try again or write to me in messenger.",
+      "tryAgain": "Try again",
+      "errors": {
+        "nameRequired": "Please enter your name",
+        "nameMin": "Name must be at least 2 characters",
+        "emailRequired": "Please enter your email",
+        "emailInvalid": "Invalid email address",
+        "messageRequired": "Please enter a message",
+        "messageMin": "Message must be at least 10 characters",
+        "serverError": "Server error. Please try again later",
+        "networkError": "Network error. Check your connection"
+      }
     }
   },
   "footer": {
