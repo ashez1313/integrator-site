@@ -32,7 +32,7 @@
             href="#contacts"
             class="hidden sm:inline-flex items-center gap-2 h-9 px-4 bg-primary hover:bg-primary-light text-white text-xs font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
           >
-            <span>~</span>
+            <i class="pi pi-envelope"></i>
             <span>{{ t('hero.cta') }}</span>
           </a>
 

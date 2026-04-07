@@ -46,6 +46,7 @@
   --text-muted: var(--text-muted-val);
   --border-color: var(--border-color-val);
   --glow-color: var(--glow-color-val);
+  --bg-gradient: var(--bg-gradient-val);
 }
 
 [data-theme="dark"] {
@@ -60,6 +61,8 @@
   --text-muted-val: #6b6b5e;
   --border-color-val: rgba(255, 255, 255, 0.06);
   --glow-color-val: rgba(0, 121, 175, 0.15);
+  --bg-gradient-val: radial-gradient(ellipse at 20% 0%, rgba(0, 121, 175, 0.08) 0%, transparent 60%),
+                     radial-gradient(ellipse at 80% 100%, rgba(45, 212, 191, 0.05) 0%, transparent 60%);
 }
 
 [data-theme="light"] {
@@ -74,6 +77,8 @@
   --text-muted-val: #8a8a7e;
   --border-color-val: rgba(0, 0, 0, 0.08);
   --glow-color-val: rgba(0, 121, 175, 0.2);
+  --bg-gradient-val: radial-gradient(ellipse at 20% 0%, rgba(0, 121, 175, 0.06) 0%, transparent 60%),
+                     radial-gradient(ellipse at 80% 100%, rgba(45, 212, 191, 0.04) 0%, transparent 60%);
 }
 
 html {
@@ -86,6 +91,9 @@ body {
   font-family: var(--font-mono);
   overflow-x: hidden;
   transition: background-color 0.4s ease, color 0.4s ease;
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 ::selection {

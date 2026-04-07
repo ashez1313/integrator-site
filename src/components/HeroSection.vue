@@ -39,16 +39,9 @@
           href="#contacts"
           class="group inline-flex items-center gap-2 h-11 px-6 bg-primary hover:bg-primary-light text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
         >
-          <span class="text-white/60 mr-0.5">~</span>
+          <i class="pi pi-envelope"></i>
           <span>{{ t('hero.cta') }}</span>
           <span class="animate-blink text-white">_</span>
-        </a>
-        <a
-          href="#cases"
-          class="inline-flex items-center gap-2 h-11 px-6 bg-surface-900 hover:bg-surface-800 text-text-primary text-sm font-semibold border border-surface-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
-        >
-          <span class="text-text-muted mr-0.5">#</span>
-          <span>{{ t('hero.ctaSecondary') }}</span>
         </a>
         <a
           href="#cases"
