@@ -18,7 +18,7 @@
         <!-- Social links -->
         <div class="flex items-center gap-2">
           <a
-            href="https://t.me/bitrix_dev"
+            href="https://t.me/Ashez1313"
             target="_blank"
             rel="noopener noreferrer"
             class="w-9 h-9 flex items-center justify-center bg-surface-800 border border-surface-700 text-text-muted hover:text-primary hover:border-primary/40 transition-all duration-300"
@@ -26,7 +26,7 @@
             <i class="pi pi-send text-sm"></i>
           </a>
           <a
-            href="mailto:hello@bitrix-dev.ru"
+            href="mailto:aishalapanov@gmail.com"
             class="w-9 h-9 flex items-center justify-center bg-surface-800 border border-surface-700 text-text-muted hover:text-primary hover:border-primary/40 transition-all duration-300"
           >
             <i class="pi pi-envelope text-sm"></i>

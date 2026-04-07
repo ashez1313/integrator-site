@@ -233,10 +233,10 @@ useScrollAnimation()
 const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_WEBHOOK_URL || ''
 
 const contactData = {
-  email: 'hello@bitrix-dev.ru',
-  phone: '+7 (999) 123-45-67',
-  phoneClean: '79991234567',
-  telegram: '@bitrix_dev',
+  email: 'aishalapanov@gmail.com',
+  phone: '+7 (921) 927-45-00',
+  phoneClean: '79219274500',
+  telegram: '@Ashez1313',
   telegramUrl: 'https://t.me/bitrix_dev',
 }
 
